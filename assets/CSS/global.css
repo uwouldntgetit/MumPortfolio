@@ -1,0 +1,19 @@
+
+body {
+    min-height: fit-content;
+    max-width: 100%;
+    /* overflow: hidden; */
+    margin: 0;
+}
+
+.responsive-img-container {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    /* overflow: scroll; */
+    
+}
+
+.head-image {
+    max-width: 100%;
+}

@@ -1,18 +1,5 @@
 
 
-body {
-    min-height: auto;
-    max-width: 100vw;
-}
-
-.responsive-image {
-    max-inline-size: 100%;
-    block-size: auto;
-
-}
-
 .wide-container {
     max-width: 100%;
 }
-
-/* maybe like this it will commit */
