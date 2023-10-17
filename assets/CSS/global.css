@@ -47,6 +47,13 @@ footer{
     max-height: 100%;
     object-fit: contain;
 }
+
+.flex-container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
 .general-container {
     width: 100%;
     max-width: 100%;       
@@ -68,6 +75,15 @@ footer{
 }
 
 
+#contact-section {
+    margin: 0px 20px;
+}
+
+.contact-elem{
+    flex-grow: 1;
+    flex-basis: 100%;
+}
+
 .basis-half{
-    flex-basis: 45%;
+    flex-basis: 45% !important;
 }
