@@ -12,8 +12,10 @@ header {
 }
 
 footer{
-    margin-bottom: 0;
-    margin-top: 50px
+    margin-bottom: 30px;
+    margin-top: 50px;
+    text-align: center;
+    line-height: 50px;
 }
 
 #about-section {
@@ -51,7 +53,9 @@ footer{
 .flex-container {
     display: flex;
     gap: 10px;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
 }
 
 .general-container {
@@ -59,6 +63,7 @@ footer{
     max-width: 100%;       
     height: auto;
 }
+
 
 .line-divider {
     margin:10px 5px;
@@ -77,13 +82,20 @@ footer{
 
 #contact-section {
     margin: 0px 20px;
+    max-width: 100%;
 }
 
-.contact-elem{
+.flex-elem {
     flex-grow: 1;
     flex-basis: 100%;
 }
 
-.basis-half{
+.basis-half {
     flex-basis: 45% !important;
 }
+
+.form-container {
+    overflow: hidden;
+
+}
+

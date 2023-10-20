@@ -3,3 +3,14 @@
 .wide-container {
     max-width: 100%;
 }
+
+
+/* @media screen and (min-width: 650px){
+    #image-about-container {
+        flex-basis: 45%;
+    }
+
+    #info-about-container {
+        flex-basis: 45%;
+    }
+} */

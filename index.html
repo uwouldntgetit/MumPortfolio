@@ -33,7 +33,7 @@
 
     <!-- About section -->
     <div id="about-section">
-        <div class="general-container">
+        <div id="image-about-container" class="general-container">
             <h1>About</h1>
             <h1 class="quote">"Ama la tua vita"</h1>
             <h3 class="quote-src">IO</h3>
@@ -48,7 +48,7 @@
             </div>
         </div>
 
-        <div class="general-container">
+        <div id="info-about-container" class="general-container">
             <p>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                 Maxime perspiciatis excepturi quidem ad sequi. A tenetur 
@@ -97,20 +97,21 @@
     <!-- Contacts -->
     <div id="contact-section">
         <h1>Contatti</h1>
-        <form class="flex-container">
-            <input type="text" required class="basis-half contact-elem">
-            <input type="text" required class="basis-half contact-elem">
-            <input type="text" required class="contact-elem">
-            <input type="text" required class="contact-elem">
-            <textarea placeholder="scrivi il messaggio" required>
+        <form class="flex-container general-container form-container">
+            <input type="text" class="basis-half flex-elem" required>
+            <input type="text" class="basis-half flex-elem" required>
+            <input type="text" class="flex-elem" required>
+            <input type="text" class="flex-elem" required >
+            <textarea placeholder="scrivi il messaggio" class="flex-elem" required>
             </textarea>
             <button type="submit">Invia</button>
         </form>
     </div>
 
     <footer>
-        footer
+        Bergamo<br>benedettavigori@gmail.com<br>392-2121-892
     </footer>
+    <script src="assets/appMP.js"></script>
 </body>
 
 <noscript>
