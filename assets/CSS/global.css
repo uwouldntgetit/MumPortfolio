@@ -12,10 +12,21 @@ header {
 }
 
 footer{
-    margin-bottom: 30px;
-    margin-top: 50px;
+    margin-bottom: 0px;
+    padding-bottom: 30px;
+    padding-top: 50px;
     text-align: center;
     line-height: 50px;
+    background-color: #f2f5f6;
+}
+
+.responsive-img-container{
+    max-width: 100%;
+    width: auto;
+    height: 40vh;
+    max-height: 40vh;
+    /* overflow: hidden; */
+    
 }
 
 #about-section {
@@ -24,17 +35,20 @@ footer{
     align-items: center;
     gap : 25px;
 
-    margin: 20px;
+    padding-top: 8vh;
+    padding-bottom: 15vh;
+
+    background-color: #f2f5f6;
 }
 
-.responsive-img-container{
-    max-width: 100%;
-    width: auto;
-    height: 30vh;
-    max-height: 30vh;
-    /* overflow: hidden; */
-    
+#info-about-container {
+    margin-top: 50px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 30px
 }
+
 
 .head-image {
     object-fit: cover;
@@ -83,6 +97,7 @@ footer{
 #contact-section {
     margin: 0px 20px;
     max-width: 100%;
+    background-color: #f2f5f6;
 }
 
 .flex-elem {
