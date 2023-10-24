@@ -11,17 +11,19 @@
     <link href="assets/CSS/about.css" rel="stylesheet">
     <link href="assets/CSS/global.css" rel="stylesheet">
 
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+
 </head>
 <body>
     
     <header>Navbar Here</header>
 
-    <div>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-        Nobis quibusdam voluptatem nihil? Aliquam dolore,
-         fuga rem omnis reprehenderit velit placeat eveniet, est
-        commodi illo saepe minus totam explicabo, blanditiis doloribus?
-         <figcaption>--Person who wrote this quote</figcaption>
+    <div id="introduction-quote">
+        NON PENSARE NEMMENO DI SCAPPARE BRUTTO FICCANASO
+         <figcaption class="quote-src">--Person who wrote this quote</figcaption>
     </div>
 
     <div class="responsive-img-container">
@@ -81,8 +83,8 @@
         <div class="general-container">
             <h1>Servizi e Costi</h1>
             <h5>L'inizio e' la parte piu' importante del lavoro</h5>
-            <figcaption>platone</figcaption>
-            <div class="line-divider"></div>
+            <figcaption class="quote-src">platone</figcaption>
+            <hr>
             <p>Trovare lo psicologo giusto e' molto complicato, per 
                 questo offro chiamate da 15-20 minuti per conoscerci meglio
             </p>
@@ -93,17 +95,17 @@
                 Terapia individuale adulti
             </h3>
             <p> Seduta da 60 min: 70€</p>
-            <div class="line-divider"></div>
+            <hr>
             <h3>Terapia individuale bambini/ragazzi</h3>
             <p>Seduta da 60 min: 50€</p>
-            <div class="line-divider"></div>
+            <hr>
 
         </div>
     </div>
 
     <!-- Contacts -->
     <div id="contact-section">
-        <h1>Contatti</h1>
+        <h1 id="contacts-title">Contatti</h1>
         <form class="flex-container general-container form-container">
             <input type="text" class="basis-half flex-elem" required>
             <input type="text" class="basis-half flex-elem" required>

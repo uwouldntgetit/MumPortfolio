@@ -1,4 +1,9 @@
 
+* {
+    font-family: "Playfair Display", roboto, sans-serif;
+}
+
+
 body {
     min-height: fit-content;
     max-width: 100%;
@@ -20,6 +25,10 @@ footer{
     background-color: #f2f5f6;
 }
 
+hr {
+    border-top: 1px solid gray;
+}
+
 .responsive-img-container{
     max-width: 100%;
     width: auto;
@@ -27,6 +36,10 @@ footer{
     max-height: 40vh;
     /* overflow: hidden; */
     
+}
+
+#introduction-quote{
+    font-size: 1.2rem;
 }
 
 #about-section {
@@ -39,6 +52,10 @@ footer{
     padding-bottom: 15vh;
 
     background-color: #f2f5f6;
+}
+
+#image-about-container {
+    min-width: 300px
 }
 
 #info-about-container {
@@ -78,11 +95,14 @@ footer{
     height: auto;
 }
 
+.quote-src {
+    font-style: italic;
+}
 
-.line-divider {
+/* .line-divider {
     margin:10px 5px;
     border: 1px solid #dddddd;
-}
+} */
 
 
 #services-pricing {
@@ -96,11 +116,16 @@ footer{
 
 #contact-section {
     margin: 0px 20px;
+    padding: 50px 10px;
     max-width: 100%;
     background-color: #f2f5f6;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    align-content: center;
 }
 
-.flex-elem {
+.flex-elem .basis-full{
     flex-grow: 1;
     flex-basis: 100%;
 }
@@ -109,8 +134,13 @@ footer{
     flex-basis: 45% !important;
 }
 
+#contacts-title {
+    flex-basis: 50%;
+    text-align: center;
+}
+
 .form-container {
     overflow: hidden;
-
+    flex-basis: 50%;
 }
 
