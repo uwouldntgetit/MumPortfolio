@@ -1,8 +1,9 @@
 "use strict"
 
-let query = window.matchMedia("(min-width: 650px)");
-let imgAbt = document.getElementById("image-about-container");
-let infAbt = document.getElementById("info-about-container");
+const query = window.matchMedia("(min-width: 650px)");
+const imgAbt = document.getElementById("image-about-container");
+const infAbt = document.getElementById("info-about-container");
+
 
 function aboutResponsive(){
     if(query.matches){

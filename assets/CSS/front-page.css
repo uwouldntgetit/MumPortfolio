@@ -5,12 +5,7 @@
 }
 
 
-/* @media screen and (min-width: 650px){
-    #image-about-container {
-        flex-basis: 45%;
-    }
+@media screen and (min-width: 650px){
 
-    #info-about-container {
-        flex-basis: 45%;
-    }
-} */
+
+}

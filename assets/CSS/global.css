@@ -1,6 +1,7 @@
 
 * {
     font-family: "Playfair Display", roboto, sans-serif;
+    color: rgb(71, 71, 71);
 }
 
 
@@ -9,6 +10,10 @@ body {
     max-width: 100%;
     /* overflow: hidden; */
     margin: 0;
+
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
 }
 
 header {
@@ -27,6 +32,11 @@ footer{
 
 hr {
     border-top: 1px solid gray;
+    margin: 50px 0;
+}
+
+textarea {
+    min-height: 200px;
 }
 
 .responsive-img-container{
@@ -40,22 +50,30 @@ hr {
 
 #introduction-quote{
     font-size: 1.2rem;
+    text-align: center;
+    padding-bottom: 50px;
 }
 
 #about-section {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-content: center;
+    justify-content: center;
     gap : 25px;
 
     padding-top: 8vh;
-    padding-bottom: 15vh;
+    padding-bottom: 33vh;
 
     background-color: #f2f5f6;
 }
 
 #image-about-container {
-    min-width: 300px
+    min-width: 300px;
+    max-width: 800px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #info-about-container {
@@ -63,7 +81,7 @@ hr {
 
     display: flex;
     flex-direction: column;
-    gap: 30px
+    gap: 10vh
 }
 
 
@@ -113,9 +131,9 @@ hr {
     flex-wrap: wrap;
 }
 
-
+/********** CONTACTS SECTION **********/
 #contact-section {
-    margin: 0px 20px;
+    margin: 0px;
     padding: 50px 10px;
     max-width: 100%;
     background-color: #f2f5f6;
@@ -125,13 +143,12 @@ hr {
     align-content: center;
 }
 
-.flex-elem .basis-full{
-    flex-grow: 1;
-    flex-basis: 100%;
-}
+.form-container {
+    overflow: hidden;
+    flex-basis: 50%;
+    max-width: 650px;
 
-.basis-half {
-    flex-basis: 45% !important;
+    row-gap: 50px;
 }
 
 #contacts-title {
@@ -139,8 +156,35 @@ hr {
     text-align: center;
 }
 
-.form-container {
-    overflow: hidden;
-    flex-basis: 50%;
+.basis-full{
+    flex-grow: 1;
+    flex-basis: 95%;
 }
 
+.flex-elem {
+    flex-grow: 1;
+    flex-basis: 95%;
+}
+
+.basis-half {
+    flex-basis: 45% !important;
+}
+
+div.flex-elem {
+    display:flex;
+    flex-direction: column;
+    align-content: flex-start;
+}
+
+input.flex-elem {
+    min-height: 35px;
+}
+
+
+#submit-button {
+    height: 60px;
+    width: 160px;
+    color: white;
+    background-color: #1a1f2d;
+    font-size: 1.2rem;
+}
