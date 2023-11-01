@@ -3,6 +3,7 @@
 const query = window.matchMedia("(min-width: 650px)");
 const imgAbt = document.getElementById("image-about-container");
 const infAbt = document.getElementById("info-about-container");
+let check = true;
 
 
 function aboutResponsive(){
@@ -18,4 +19,4 @@ function aboutResponsive(){
     }
 }
 
-query.onchange(aboutResponsive());
+setTimeout(aboutResponsive(), 500);

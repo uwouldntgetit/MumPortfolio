@@ -1,3 +1,13 @@
+
+.about-section {
+    background-color: white !important;
+}
+
+div.page-title {
+    background-color: #f2f5f6;
+}
+
+
 @media screen and (min-width: 650px){
     #about-section{
         padding-bottom: 25vh;
