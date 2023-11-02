@@ -4,6 +4,12 @@
     max-width: 100%;
 }
 
+.test {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+}
+
 
 @media screen and (min-width: 650px){
 
