@@ -210,30 +210,33 @@ class Navbar extends HTMLElement {
     }
 
     connectedCallback() {
-        if(screenWidthQuery.matches)
+        if(screenWidthQuery.matches){
+            const navbarToggle = document.querySelector("#navbar-toggle");
+            const navbarMenu = document.querySelector("#navbar-menu");
+            const navbarLinksContainer = navbarMenu.querySelector(".navbar-links");
+            let isNavbarExpanded = navbarToggle.getAttribute("aria-expanded") === "true";
+
+            const toggleNavbarVisibility = () => {
+            isNavbarExpanded = !isNavbarExpanded;
+            navbarToggle.setAttribute("aria-expanded", isNavbarExpanded);
+            };
+
+            navbarToggle.addEventListener("click", toggleNavbarVisibility);
+
+            navbarLinksContainer.addEventListener("click", (e) => e.stopPropagation());
+            navbarMenu.addEventListener("click", toggleNavbarVisibility);
+
+
             this.innerHTML = hamburgerNavBar;
+        }
         else
             this.innerHTML = normalNavbar;
     }
 }
 
 
-// I have to understand what this navbar is for
-const navbar = document.getElementById("navbar");
-const navbarToggle = navbar.querySelector("#navbar-toggle");
-const navbarMenu = document.querySelector("#navbar-menu");
-const navbarLinksContainer = navbarMenu.querySelector(".navbar-links");
-let isNavbarExpanded = navbarToggle.getAttribute("aria-expanded") === "true";
-
-const toggleNavbarVisibility = () => {
-  isNavbarExpanded = !isNavbarExpanded;
-  navbarToggle.setAttribute("aria-expanded", isNavbarExpanded);
-};
-
-navbarToggle.addEventListener("click", toggleNavbarVisibility);
-
-navbarLinksContainer.addEventListener("click", (e) => e.stopPropagation());
-navbarMenu.addEventListener("click", toggleNavbarVisibility);
+// use this tutorial as a base: https://www.aleksandrhovhannisyan.com/blog/responsive-navbar-tutorial/
+// i have to understand what this aria-... is in the html code
 
 
-customElements.define("navbar", Navbar);
+customElements.define("custom-navbar", Navbar);
