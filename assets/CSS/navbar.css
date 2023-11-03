@@ -12,20 +12,21 @@
 }
 
 .container {
-            max-width: 1000px;
-            padding-left: 1.4rem;
-            padding-right: 1.4rem;
-            margin-left: auto;
-            margin-right: auto;
-            }
+    max-width: 1000px;
+    padding-left: 1.4rem;
+    padding-right: 1.4rem;
+    margin-left: auto;
+    margin-right: auto;
+}
 #navbar {
     --navbar-height: 64px;
-    position: fixed;
+    position: relative;
     height: var(--navbar-height);
     background-color: var(--navbar-bg-color);
     left: 0;
     right: 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    top: 0;
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15) */
 }
 .navbar-container {
     display: flex;
@@ -85,22 +86,27 @@
     width: 25px;
     height: 4px;
     margin: 2px;
-    background-color: var(--navbar-text-color);
+   /* background-color: var(--navbar-text-color);*/
+   background-color: black;
 }
 #navbar-toggle:is(:focus, :hover) .icon-bar {
-    background-color: var(--navbar-text-color-focus);
+    /* background-color: var(--navbar-text-color-focus); */
+    background-color: black;
 }
 #navbar-toggle[aria-expanded="true"] .icon-bar:is(:first-child, :last-child) {
     position: absolute;
     margin: 0;
     width: 30px;
 }
+/* first bar of hamburger icon rotates clockwise */
 #navbar-toggle[aria-expanded="true"] .icon-bar:first-child {
     transform: rotate(45deg);
 }
+/* second bar of hamburger icon disappears */
 #navbar-toggle[aria-expanded="true"] .icon-bar:nth-child(2) {
     opacity: 0;
 }
+/* third bar, bottom one i think, rotates counterclockwise */
 #navbar-toggle[aria-expanded="true"] .icon-bar:last-child {
     transform: rotate(-45deg);
 }
@@ -129,7 +135,7 @@
     right: 0;
     margin: 1.4rem;
     border-radius: 5px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); */
 }
 
 #navbar-toggle[aria-expanded="true"] + #navbar-menu .navbar-links {

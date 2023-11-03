@@ -45,6 +45,10 @@ textarea {
     min-height: 200px;
 }
 
+a {
+    text-decoration: none;
+}
+
 
 /* NAVBAR END */
 
