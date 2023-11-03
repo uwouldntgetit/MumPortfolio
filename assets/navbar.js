@@ -1,14 +1,13 @@
 "use strict"
 
-const screenWidthQuery = window.matchMedia("(min-width: 900px)");
 
 // TEST
-const template = document.createElement("template");
+// const template = document.createElement("template");
 
-template.innerHTML = "<p> ciao</p>";
+// template.innerHTML = "<p> ciao</p>";
 
-// the template is put as the last element in a page
-document.body.appendChild(template);
+// // the template is put as the last element in a page
+// document.body.appendChild(template);
 
 const hamburgerNavBar = `
         <style>
@@ -190,6 +189,7 @@ const hamburgerNavBar = `
 
 const normalNavbar = `
 
+                <div class="flex-container">
                     <div class="left-part-navbar navbar-part">
                         <a>About</a>
                         <a>Servizi</a>
@@ -202,7 +202,10 @@ const normalNavbar = `
                         <a>Risorse</a>
                         <a>Contatti</a>
                     </div>
+                </div>
                     `;
+
+const screenWidthQuery = window.matchMedia("(min-width: 900px)");
 
 class Navbar extends HTMLElement {
     constructor() {
@@ -210,10 +213,12 @@ class Navbar extends HTMLElement {
     }
 
     connectedCallback() {
-        if(screenWidthQuery.matches){
-            const navbarToggle = document.querySelector("#navbar-toggle");
+        if(!screenWidthQuery.matches){
+            this.innerHTML = hamburgerNavBar;
+
+            const navbarToggle = document.getElementById("#navbar-toggle");
             const navbarMenu = document.querySelector("#navbar-menu");
-            const navbarLinksContainer = navbarMenu.querySelector(".navbar-links");
+            const navbarLinksContainer = document.querySelector(".navbar-links");
             let isNavbarExpanded = navbarToggle.getAttribute("aria-expanded") === "true";
 
             const toggleNavbarVisibility = () => {
@@ -227,7 +232,6 @@ class Navbar extends HTMLElement {
             navbarMenu.addEventListener("click", toggleNavbarVisibility);
 
 
-            this.innerHTML = hamburgerNavBar;
         }
         else
             this.innerHTML = normalNavbar;
