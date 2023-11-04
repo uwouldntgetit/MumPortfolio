@@ -40,7 +40,7 @@
 }
 
 .home-link,
-    .navbar-link {
+.navbar-link {
     color: var(--navbar-text-color);
     text-decoration: none;
     display: flex;

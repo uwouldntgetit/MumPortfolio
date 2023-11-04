@@ -8,26 +8,29 @@
 
     <!-- file linkage -->
     <link href="assets/CSS/front-page.css" rel="stylesheet">
-    <link href="assets/CSS/about.css" rel="stylesheet">
+    <!-- <link href="assets/CSS/about.css" rel="stylesheet"> -->
     <link href="assets/CSS/global.css" rel="stylesheet">
     <link href="assets/CSS/navbar.css" rel="stylesheet">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 
 </head>
 <body>
     
     <header>
-        <custom-navbar></custom-navbar>
+        <custom-navbar class="general-container"></custom-navbar>
+        
     </header>
 
     <div id="introduction-quote">
         NON PENSARE DI POTER SCAPPARE BRUTTO FICCANASO
          <figcaption class="quote-src">--Person who wrote this quote</figcaption>
     </div>
+
+    <div class="main-title-navbar invisible"></div>
 
     <div class="responsive-img-container">
         <!-- Random realxing image -->
@@ -56,7 +59,7 @@
                 </div>
             </div>
 
-            <div class="info-about-container general-container">
+            <div id="info-about-container" class="info-about-container general-container">
                 <p>
                     Mi sforzo di creare un'atmosfera autentica e accogliente
                     per i miei clienti, in modo che possano esplorare le proprie vite in un modo nuovo
