@@ -215,3 +215,7 @@ input.flex-elem {
     background-color: #1a1f2d;
     font-size: 1.2rem;
 }
+
+@media(prefers-reduced-motion: no-preference){
+    /* disable all transitions here */
+}

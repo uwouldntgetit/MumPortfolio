@@ -8,7 +8,6 @@ let check = true;
 
 function aboutResponsive(){
     if(query.matches){
-        console.log("ciao");
         imgAbt.classList.add("basis-half")
         infAbt.classList.add("basis-half")
     }
