@@ -12,11 +12,10 @@ const hamburgerNavBar = `
         
             <div id="navbar">
                 <nav class="navbar-container container">
-                    <a href="#" class="home-link">
-                        <div class="navbar-logo"></div>
-                        Benedetta Vigori
+                    <a onclick="redirectHome()" class="home-link">
+                        <div class="navbar-title">Benedetta Vigori</div>
                     </a>
-                    <!-- this part is the icon -->
+                    <!-- this part is the hamburger -->
                     <button type="button" id="navbar-toggle" aria-controls="navbar-menu" aria-label="Toggle menu" aria-expanded="false">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -24,10 +23,10 @@ const hamburgerNavBar = `
                     </button>
                     <div id="navbar-menu" aria-labelledby="navbar-toggle">
                         <ul class="navbar-links">
-                            <li class="navbar-item"><a class="navbar-link" href="/about">About</a></li>
-                            <li class="navbar-item"><a class="navbar-link" href="/blog">Blog</a></li>
-                            <li class="navbar-item"><a class="navbar-link" href="/careers">Careers</a></li>
-                            <li class="navbar-item"><a class="navbar-link" href="/contact">Contact</a></li>
+                            <li class="navbar-item"><a class="navbar-link" onclick="redirectAbout()">Informazioni Personali</a></li>
+                            <li class="navbar-item"><a class="navbar-link" onclick="redirectServices()">Costi e Servizi</a></li>
+                            <li class="navbar-item"><a class="navbar-link" onclick="redirectFaq()">Faq</a></li>
+                            <li class="navbar-item"><a class="navbar-link" onclick="redirectContacts()">Contatti</a></li>
                         </ul>
                     </div>
                 </nav>
@@ -38,21 +37,20 @@ const normalNavbar = `
 
                 <div class="flex-container general-container">
                     <div class="left-part-navbar navbar-part">
-                        <a href="pages/about.html">About</a>
-                        <a>Servizi</a>
+                        <a onclick="redirectAbout()">About</a>
+                        <a onclick="redirectServices()">Servizi</a>
                     </div>
                     <div class="main-title-navbar">
-                        <a>BENEDETTA VIGORI</a>
+                        <a onclick="redirectHome()">BENEDETTA VIGORI</a>
                     </div>
                     <div class="right-part-navbar navbar-part">
-                        <a>FAQ</a>
+                        <a onclick="redirectFaq()">Domande</a>
                         <a>Risorse</a>
-                        <a>Contatti</a>
                     </div>
                 </div>
                     `;
 
-const screenWidthQuery = window.matchMedia("(max-width: 900px)");
+const screenWidthQuery = window.matchMedia("(max-width: 800px)");
 /* TODO:
 * disable scrolling when navbar-menu is visible
 * make navbar-menu less opaque and more readable
@@ -64,33 +62,64 @@ class Navbar extends HTMLElement {
         super();
         console.log("ciao")
     }
-    // there's no connected callback
+
     connectedCallback() {
         if(screenWidthQuery.matches){
-            this.innerHTML = hamburgerNavBar;
-            console.log("ciao")
-            /* KEEP THIS COMMENT HERE
-            * basically i was stuck for three days on this navbar problem and then i came here and noticed that in
-            * const navbarToggle = document.getElementById("#navbar-toggle");
-            * the string has a '#' before it and thought, "what if i delete it?" . I did it and it worked.
-            */
-            const navbarToggle = document.getElementById("navbar-toggle");
-            const navbarMenu = document.querySelector("#navbar-menu");
-            const navbarLinksContainer = document.querySelector(".navbar-links");
-            let isNavbarExpanded = navbarToggle.getAttribute("aria-expanded") === "true";
+        this.innerHTML = hamburgerNavBar;
+        console.log("ciao")
+        /* KEEP THIS COMMENT HERE
+        * basically i was stuck for     <!-- Contacts -->
+    <div id="contact-section">
+        <h1 id="contacts-title">Contatti</h1>
+        <form class="flex-container general-container form-container">
+            <div class="basis-half flex-elem">
+                Nome
+                <input name="first-name" type="text" class="flex-elem" required>
+            </div>
+            <div class="flex-elem basis-half">
+                Cognome
+                <input name="last-name" type="text" class="flex-elem" required>
+            </div>
+            <div class="flex-elem">
+                Email
+                <input name="email" type="text" class="flex-elem" required>
+            </div>
+            <div class="flex-elem">
+                Oggetto
+                <input name="subject" type="text" class="flex-elem" required>
+            </div>
+            <textarea placeholder="scrivi il messaggio" class="flex-elem" required></textarea>
+            <button id="submit-button" type="submit">INVIA</button>
+        </form>
+    </div>three days on this navbar problem and then i came here and noticed that in
+        * const navbarToggle = document.getElementById("#navbar-toggle");
+        * the string has a '#' before it and thought, "what if i delete it?" . I did it and it worked.
+        */
+        const navbarToggle = document.getElementById("navbar-toggle");
+        const navbarMenu = document.querySelector("#navbar-menu");
+        const navbarLinksContainer = document.querySelector(".navbar-links");
+        let isNavbarExpanded = navbarToggle.getAttribute("aria-expanded") === "true";
 
-            const toggleNavbarVisibility = () => {
-            isNavbarExpanded = !isNavbarExpanded;
-            navbarToggle.setAttribute("aria-expanded", isNavbarExpanded);
-            };
+        const toggleNavbarVisibility = () => {
+        isNavbarExpanded = !isNavbarExpanded;
+        navbarToggle.setAttribute("aria-expanded", isNavbarExpanded);
+        document.documentElement.style.overflow = isNavbarExpanded ? "hidden" : "scroll";
+        document.body.scroll = isNavbarExpanded ? "no" : "yes";
+        };
 
-            navbarToggle.addEventListener("click", toggleNavbarVisibility);
+        navbarToggle.addEventListener("click", toggleNavbarVisibility);
 
-            navbarLinksContainer.addEventListener("click", (e) => e.stopPropagation());
-            navbarMenu.addEventListener("click", toggleNavbarVisibility);
+        navbarLinksContainer.addEventListener("click", (e) => e.stopPropagation());
+        navbarMenu.addEventListener("click", toggleNavbarVisibility);
+
+        let links = document.getElementsByClassName("navbar-link");
+
+
         }
         else{
             this.innerHTML = normalNavbar;
+            // document.documentElement.style.overflow = "scroll";
+            // document.body.scroll = "yes";
         }
         
     }
@@ -109,3 +138,17 @@ const observer = new IntersectionObserver((ent) => {
 
 
 customElements.define("custom-navbar", Navbar);
+
+function redirectHome(){
+    document.location = "/MumPortfolio/index.html";
+}
+
+function redirectAbout(){
+    document.location = "/MumPortfolio/pages/about.html";
+}
+function redirectFaq(){
+    document.location = "/MumPortfolio/pages/faq.html";
+}
+function redirectServices(){
+    document.location = "/MumPortfolio/pages/services.html";
+}
