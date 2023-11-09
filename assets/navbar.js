@@ -124,6 +124,7 @@ class Navbar extends HTMLElement {
         
     }
 }
+customElements.define("custom-navbar", Navbar);
 
 // this is in preparationn for the transformation of the #navbar-menu elem
 const observer = new IntersectionObserver((ent) => {
@@ -136,8 +137,9 @@ const observer = new IntersectionObserver((ent) => {
 // use this tutorial as a base: https://www.aleksandrhovhannisyan.com/blog/responsive-navbar-tutorial/
 // i have to understand what this aria-... is in the html code
 
+function responsiveNavbar(){
+}
 
-customElements.define("custom-navbar", Navbar);
 
 function redirectHome(){
     document.location = "/MumPortfolio/index.html";

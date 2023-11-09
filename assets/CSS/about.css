@@ -1,12 +1,21 @@
-
-.about-section {
-    background-color: white !important;
+h1 {
+    margin: 0;
 }
+
 
 div.page-title {
     background-color: #f2f5f6;
-    padding-bottom: 30px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+.about-section {
+    background-color: white !important;
+    padding: 20px;
+}
+
 
 
 @media screen and (min-width: 650px){

@@ -1,3 +1,6 @@
+ul {
+    padding: 0;
+}
 
 /* NAVBAR */
 .navbar-part{
@@ -8,7 +11,7 @@
 }
 
 .main-title-navbar {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
 }
 
 .container {
@@ -145,6 +148,10 @@
     right: 0;
     margin: 1.4rem;
     border-radius: 5px;
+    margin:0;
+    padding-top: 20px;
+    padding-right: 0;
+    padding-left: 0;
     /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); */
 }
 
