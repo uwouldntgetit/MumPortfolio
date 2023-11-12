@@ -22,7 +22,6 @@ ul {
 }
 #navbar {
     --navbar-height: 64px;
-    position: relative;
     height: var(--navbar-height);
     background-color: var(--navbar-bg-color);
     left: 0;

@@ -66,7 +66,7 @@ class Navbar extends HTMLElement {
     connectedCallback() {
         if(screenWidthQuery.matches){
         this.innerHTML = hamburgerNavBar;
-        console.log("ciao")
+        console.log("ciaoaoao")
         /* KEEP THIS COMMENT HERE
         * basically i was stuck for     <!-- Contacts -->
     <div id="contact-section">
