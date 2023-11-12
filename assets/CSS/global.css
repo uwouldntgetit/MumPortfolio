@@ -2,6 +2,7 @@
 * {
     font-family: "Playfair Display", roboto, sans-serif;
     color: rgb(71, 71, 71);
+    box-sizing: border-box;
 }
 
 
@@ -76,6 +77,12 @@ div.page-title {
     text-align: center;
     padding-bottom: 50px;
     max-width: 70%;
+    height: 20vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .about-section {
@@ -107,6 +114,12 @@ div.page-title {
     display: flex;
     flex-direction: column;
     gap: 10vh
+}
+
+.italic {
+    font-size: 1rem;
+    font-style: italic;
+    margin-bottom: 10px;
 }
 
 
