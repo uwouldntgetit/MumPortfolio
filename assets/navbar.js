@@ -142,15 +142,15 @@ function responsiveNavbar(){
 
 
 function redirectHome(){
-    document.location = "/MumPortfolio/index.html";
+    document.location = "/index.html";
 }
 
 function redirectAbout(){
-    document.location = "/MumPortfolio/pages/about.html";
+    document.location = "/pages/about.html";
 }
 function redirectFaq(){
-    document.location = "/MumPortfolio/pages/faq.html";
+    document.location = "/pages/faq.html";
 }
 function redirectServices(){
-    document.location = "/MumPortfolio/pages/services.html";
+    document.location = "/pages/services.html";
 }

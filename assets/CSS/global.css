@@ -14,7 +14,6 @@ body {
 
     display: flex;
     flex-direction: column;
-    gap: 10px;
     align-items: center;
 }
 
@@ -253,5 +252,8 @@ input.flex-elem {
         flex-basis: 100%;
         /* color: red; */
         flex-grow: 1;
+    }
+    #introduction-quote {
+        font-size: 1rem;
     }
 }
