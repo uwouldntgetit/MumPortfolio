@@ -4,7 +4,7 @@ const contactsHTML = `
     <!-- Contacts -->
     <div id="contact-section">
         <h1 id="contacts-title">Contatti</h1>
-        <form id="contacts-form" class="flex-container general-container form-container">
+        <form id="contacts-form" class="flex-container general-container form-container" onsubmit="sendEmailContacts()">
             <div class="basis-half flex-elem">
                 Nome
                 <input name="first-name" type="text" class="flex-elem" id="name" required>
@@ -22,7 +22,7 @@ const contactsHTML = `
                 <input name="subject" type="text" class="flex-elem" id="object" required>
             </div>
             <textarea placeholder="scrivi il messaggio" class="flex-elem" id="text" required></textarea>
-            <button id="submit-button" type="submit">INVIA</button>
+            <button id="submit-button" type="submit" >INVIA</button>
         </form>
     </div>
 `
