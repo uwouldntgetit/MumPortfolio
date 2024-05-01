@@ -23,10 +23,10 @@ const hamburgerNavBar = `
                     </button>
                     <div id="navbar-menu" aria-labelledby="navbar-toggle">
                         <ul class="navbar-links">
-                            <li class="navbar-item"><a class="navbar-link" onclick="redirectAbout()">Informazioni Personali</a></li>
-                            <li class="navbar-item"><a class="navbar-link" onclick="redirectServices()">Costi e Servizi</a></li>
-                            <li class="navbar-item"><a class="navbar-link" onclick="redirectFaq()">Faq</a></li>
-                            <li class="navbar-item"><a class="navbar-link" onclick="redirectContacts()">Contatti</a></li>
+                            <li class="navbar-item"><a class="navbar-link" onclick="redirectAbout()">About</a></li>
+                            <li class="navbar-item"><a class="navbar-link" onclick="redirectServices()">Servizi</a></li>
+                            <li class="navbar-item"><a class="navbar-link" onclick="redirectFaq()">Domande</a></li>
+                            <li class="navbar-item"><a class="navbar-link" onclick="redirectContacts()">Risorse</a></li>
                         </ul>
                     </div>
                 </nav>
@@ -142,7 +142,7 @@ function responsiveNavbar(){
 
 
 function redirectHome(){
-    document.location = "/index.html";
+    document.location = "/index.php";
 }
 
 function redirectAbout(){
