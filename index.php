@@ -145,6 +145,7 @@
     <script src="assets/navbar.js"></script>
     <script src="assets/contacts.js"></script>
     <script src="assets/footer.js"></script>
+    <script src="assets/sendEmail.js"></script>
 
 </body>
 

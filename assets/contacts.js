@@ -7,21 +7,21 @@ const contactsHTML = `
         <form id="contacts-form" class="flex-container general-container form-container">
             <div class="basis-half flex-elem">
                 Nome
-                <input name="first-name" type="text" class="flex-elem" required>
+                <input name="first-name" type="text" class="flex-elem" id="name" required>
             </div>
             <div class="flex-elem basis-half">
                 Cognome
-                <input name="last-name" type="text" class="flex-elem" required>
+                <input name="last-name" type="text" class="flex-elem" id="last-name" required>
             </div>
             <div class="flex-elem">
                 Email
-                <input name="email" type="text" class="flex-elem" required>
+                <input name="email" type="text" class="flex-elem" id="email" required>
             </div>
             <div class="flex-elem">
                 Oggetto
-                <input name="subject" type="text" class="flex-elem" required>
+                <input name="subject" type="text" class="flex-elem" id="object" required>
             </div>
-            <textarea placeholder="scrivi il messaggio" class="flex-elem" required></textarea>
+            <textarea placeholder="scrivi il messaggio" class="flex-elem" id="text" required></textarea>
             <button id="submit-button" type="submit">INVIA</button>
         </form>
     </div>
